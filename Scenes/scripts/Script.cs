@@ -13,11 +13,6 @@ public class Script : MonoBehaviour
     public GameObject panelJuego;
     public Text MensajeFALLO;
 
-    [SerializeField]
-     private GameObject Carta;
-
-
-
 
     void Start()
     {
