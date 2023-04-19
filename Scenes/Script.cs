@@ -25,12 +25,10 @@ public class Script : MonoBehaviour
     }   
    public void ComenzarJuego()
      { if (jugador1.text.Length == 0 || jugador2.text.Length == 0 || jugador1.text.Length > 9 || jugador2.text.Length > 9)
-         {
-            MensajeFALLO.text="Introduzca un nombre válido para ambos jugadores";
+        {
+            MensajeFALLO.text = "Introduzca un nombre válido para ambos jugadores";
             return;
-            }
-
-            MensajeBIENVENIDA.text = "¡Bienvenidos al juego, " + jugador1.text + " y " + jugador2.text + "!";
+        }
             panelInicio.SetActive(false);
             panelJuego.SetActive(true);
 
