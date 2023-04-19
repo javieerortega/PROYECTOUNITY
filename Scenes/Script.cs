@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Script : MonoBehaviour
 {
@@ -10,6 +12,13 @@ public class Script : MonoBehaviour
     public GameObject panelInicio;
     public GameObject panelJuego;
     public Text MensajeFALLO;
+
+    [SerializeField]
+     private GameObject Carta;
+
+
+
+
     void Start()
     {
         
@@ -31,5 +40,10 @@ public class Script : MonoBehaviour
 
             
         }
-    }
+    public void OnMouseDown() {
+        if (Carta.activeSelf)
+            Carta.SetActive(false); }
+}
 
+
+  
