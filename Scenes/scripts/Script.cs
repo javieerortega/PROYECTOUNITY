@@ -40,9 +40,7 @@ public class Script : MonoBehaviour
 
             
         }
-    public void OnMouseDown() {
-        if (Carta.activeSelf)
-            Carta.SetActive(false); }
+  
 }
 
 
