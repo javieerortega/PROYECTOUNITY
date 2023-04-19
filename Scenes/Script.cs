@@ -10,9 +10,6 @@ public class Script : MonoBehaviour
     public GameObject panelInicio;
     public GameObject panelJuego;
     public Text MensajeFALLO;
-    public Text MensajeBIENVENIDA;
-
-
     void Start()
     {
         
