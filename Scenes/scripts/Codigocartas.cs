@@ -5,41 +5,45 @@ using UnityEngine.UI;
 
 public class Codigocartas : MonoBehaviour
 {
-    public Image imagenAMostrar;
-    public Image fotito;
+
+    private List<Image> selectedImages = new List<Image>();
+    private int maxSelectedImages = 2;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void OnImageClick()
+    public void OnImageClick(Image image)
     {
-        // Si no hay ninguna imagen seleccionada, selecciona la primera
-        if (!firstImageSelected && !secondImageSelected)
+        // Si la imagen ya está seleccionada, deseleccionarla y volverla a la posición inicial
+        if (selectedImages.Contains(image))
         {
-            firstImageSelected = true;
+            selectedImages.Remove(image);
+            image.gameObject.SetActive(false); // Opcional: volver a la posición inicial
         }
-        // Si ya hay una imagen seleccionada, selecciona la segunda
-        else if (firstImageSelected && !secondImageSelected)
+        // Si la imagen no está seleccionada y no se han seleccionado el máximo de imágenes, seleccionarla
+        else if (selectedImages.Count < maxSelectedImages)
         {
-            secondImageSelected = true;
-            // Desactiva la imagen anterior si está activada
-            if (imagenAMostrar.gameObject.activeSelf)
+            selectedImages.Add(image);
+            image.gameObject.SetActive(true);
+        }
+
+        // Si se han seleccionado el máximo de imágenes permitidas, hacer algo con ellas
+        if (selectedImages.Count == maxSelectedImages)
+        {
+            // Hacer algo con las imágenes seleccionadas, por ejemplo, voltearlas
+            foreach (Image selectedImage in selectedImages)
             {
-                imagenAMostrar.gameObject.SetActive(false);
+                selectedImage.gameObject.SetActive(false);
             }
-            // Muestra la nueva imagen
-            imagenAMostrar.gameObject.SetActive(true);
-        }
-        // Si ya se han seleccionado dos imágenes, no hace nada
-        else
-        {
-            return;
+            // Limpiar la lista de imágenes seleccionadas
+            selectedImages.Clear();
         }
     }
+
 }
