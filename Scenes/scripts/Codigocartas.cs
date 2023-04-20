@@ -26,14 +26,47 @@ public class Codigocartas : MonoBehaviour
         // Si ya se han seleccionado el número máximo de imágenes, desactivamos todas las imágenes y limpiamos la lista de selección
         if (selectedImages.Count == maxSelectedImages)
         {
-            bool match = selectedImages[0].GetComponentInChildren<Image>().sprite.name == selectedImages[1].GetComponentInChildren<Image>().sprite.name;
-            foreach (GameObject selectedImage in selectedImages)
+            // Buscamos si hay dos imágenes con el mismo source image
+            bool sameImage = false;
+            for (int i = 0; i < selectedImages.Count; i++)
             {
-                if (match)
+                Image image1 = selectedImages[i].GetComponent<Image>();
+                for (int j = i + 1; j < selectedImages.Count; j++)
                 {
-                    Destroy(selectedImage);
+                    Image image2 = selectedImages[j].GetComponent<Image>();
+                    if (image1.sprite.name == image2.sprite.name)
+                    {
+                        sameImage = true;
+                        break;
+                    }
                 }
-                else
+                if (sameImage)
+                {
+                    break;
+                }
+            }
+
+            // Si hay dos imágenes con el mismo source image, desactivamos todas las imágenes y las imágenes de los botones
+            if (sameImage)
+            {
+                foreach (GameObject selectedImage in selectedImages)
+                {
+                    selectedImage.SetActive(false);
+                    Button parentButton = selectedImage.GetComponentInParent<Button>();
+                    if (parentButton != null)
+                    {
+                        Image buttonImage = parentButton.GetComponent<Image>();
+                        if (buttonImage != null)
+                        {
+                            buttonImage.enabled = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // Si no hay dos imágenes con el mismo source image, desactivamos todas las imágenes
+                foreach (GameObject selectedImage in selectedImages)
                 {
                     selectedImage.SetActive(false);
                 }
