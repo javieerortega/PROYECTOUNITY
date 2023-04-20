@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Codigocartas : MonoBehaviour
 {
-
     private List<Image> selectedImages = new List<Image>();
     private int maxSelectedImages = 2;
     void Start()
