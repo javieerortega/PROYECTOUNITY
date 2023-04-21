@@ -10,11 +10,13 @@ public class Codigocartas : MonoBehaviour
     public List<GameObject> selectedImages = new List<GameObject>();
     public int maxSelectedImages = 2;
 
-    public GameObject Jugador1;
-    public GameObject Jugador2;
+    public Script nombreJugadoresScript;
+
+    public Text Jugador2;
     public int Jugador1Lives = 3;
     public int Jugador2Lives = 3;
     public GameObject panelvictoria;
+    public GameObject panelJuego;
 
     public List<GameObject> vidap1;
     public List<GameObject> vidap2;
@@ -24,6 +26,14 @@ public class Codigocartas : MonoBehaviour
     public Text turnText;
 
     public Text MensajeVictoria;
+
+    public InputField jugador1;
+    public InputField jugador2;
+    public GameObject panelInicio;
+    //public GameObject panelJuego;
+    public Text MensajeFALLO;
+
+
 
     void Start()
     {
@@ -47,27 +57,16 @@ public class Codigocartas : MonoBehaviour
 
     void seleccionCarta(GameObject image)
     {
-        //if (Jugador1Lives <= 0 || Jugador2Lives <= 0)
-        //{
-        //    panelvictoria.SetActive(true);
-        //    MensajeVictoria.text = "EL GANADOR ES" + ;
-        //    return;
-        //}
-        if (Jugador1Lives <= 0)
+        if (Jugador1Lives <= 0 || Jugador2Lives <= 0)
         {
             panelvictoria.SetActive(true);
-            MensajeVictoria.text = "EL GANADOR ES Jugador 2";
+            panelJuego.SetActive(false);
+            MensajeVictoria.text = "EL GANADOR ES";
             return;
         }
-        else if (Jugador2Lives <= 0)
-        {
-            panelvictoria.SetActive(true);
-            MensajeVictoria.text = "EL GANADOR ES Jugador 1";
-            return;
-        }
-
         if (isJugador1Turn)
         {
+            turnText.text = "Turno de "+ jugador1.text;
             if (selectedImages.Count >= maxSelectedImages)
             {
                 Image image1 = selectedImages[0].GetComponent<Image>();
@@ -106,6 +105,7 @@ public class Codigocartas : MonoBehaviour
         }
         else 
         {
+            turnText.text = "Turno de"+ jugador2.text;
             if (selectedImages.Count >= maxSelectedImages)
             {
                 Image image1 = selectedImages[0].GetComponent<Image>();
@@ -177,18 +177,18 @@ public class Codigocartas : MonoBehaviour
             
         //}
     }
-    void TextodelTurno()
-    {
+    //void TextodelTurno()
+    //{
     
-        if (isJugador1Turn)
-        {
-            turnText.text = "Turno de Player 1";
-        }
-        else
-        {
-            turnText.text = "Turno de Player 2";
-        }
-    }
+    //    if (isJugador1Turn)
+    //    {
+            
+    //    }
+    //    else
+    //    {
+            
+    //    }
+    //}
     public void reiniciar()
     {
         SceneManager.LoadScene(0);
@@ -199,6 +199,23 @@ public class Codigocartas : MonoBehaviour
     {
         Application.Quit();
     }
-   
+    void GameOver(string winner)
+    {
+        MensajeVictoria.text = "El ganador es " + winner + "!";
+        panelvictoria.SetActive(true);
+    }
+    public void ComenzarJuego()
+    {
+        if (jugador1.text.Length == 0 || jugador2.text.Length == 0 || jugador1.text.Length > 9 || jugador2.text.Length > 9)
+
+        {
+            MensajeFALLO.text = "Introduzca un nombre válido para ambos jugadores";
+            return;
+        }
+        panelInicio.SetActive(false);
+        panelJuego.SetActive(true);
+
+
+    }
 
 }
