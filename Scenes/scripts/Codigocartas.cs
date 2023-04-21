@@ -47,12 +47,25 @@ public class Codigocartas : MonoBehaviour
 
     void seleccionCarta(GameObject image)
     {
-        if (Jugador1Lives <= 0 || Jugador2Lives <= 0)
+        //if (Jugador1Lives <= 0 || Jugador2Lives <= 0)
+        //{
+        //    panelvictoria.SetActive(true);
+        //    MensajeVictoria.text = "EL GANADOR ES" + ;
+        //    return;
+        //}
+        if (Jugador1Lives <= 0)
         {
             panelvictoria.SetActive(true);
-            MensajeVictoria.text = "EL GANADOR ES" + ;
+            MensajeVictoria.text = "EL GANADOR ES Jugador 2";
             return;
         }
+        else if (Jugador2Lives <= 0)
+        {
+            panelvictoria.SetActive(true);
+            MensajeVictoria.text = "EL GANADOR ES Jugador 1";
+            return;
+        }
+
         if (isJugador1Turn)
         {
             if (selectedImages.Count >= maxSelectedImages)
@@ -186,13 +199,6 @@ public class Codigocartas : MonoBehaviour
     {
         Application.Quit();
     }
-    public void ganador()
-    {
-        if (Jugador1Lives = 0)
-        {
-            MensajeVictoria.text = "Jugador2";
-            return;
-        }
-    }
+   
 
 }
