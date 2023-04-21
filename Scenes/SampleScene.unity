@@ -312,16 +312,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &74823738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,16 +770,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &186735884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,16 +934,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &207948383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,16 +1174,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &269010189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2249,16 +2269,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &670149382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2840,16 +2865,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &780606895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2999,16 +3029,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &786219072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3417,16 +3452,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &821312173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3652,16 +3692,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &908765266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3963,16 +4008,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &950069773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4489,16 +4539,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &1148249807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4724,16 +4779,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &1313484955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,16 +5166,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &1342640445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5345,16 +5410,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &1362927908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6570,16 +6640,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &1747647742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6788,11 +6863,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 1706971497}
-  Jugador2: {fileID: 135834122}
+  nombreJugadoresScript: {fileID: 0}
+  Jugador2: {fileID: 396974390}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 717597948}
+  panelJuego: {fileID: 385277360}
   vidap1:
   - {fileID: 695283405}
   - {fileID: 1076264941}
@@ -6804,6 +6880,10 @@ MonoBehaviour:
   isJugador1Turn: 1
   turnText: {fileID: 1356164570}
   MensajeVictoria: {fileID: 1607468703}
+  jugador1: {fileID: 1114712801}
+  jugador2: {fileID: 1339462959}
+  panelInicio: {fileID: 393747458}
+  MensajeFALLO: {fileID: 413087382}
 --- !u!1 &1949957039
 GameObject:
   m_ObjectHideFlags: 0
@@ -6939,16 +7019,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &1974423186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7098,16 +7183,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &2024432305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7257,16 +7347,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &2031792680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7572,16 +7667,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!114 &2076163314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7825,16 +7925,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedImages: []
   maxSelectedImages: 2
-  Jugador1: {fileID: 0}
+  nombreJugadoresScript: {fileID: 0}
   Jugador2: {fileID: 0}
   Jugador1Lives: 3
   Jugador2Lives: 3
   panelvictoria: {fileID: 0}
+  panelJuego: {fileID: 0}
   vidap1: []
   vidap2: []
   isJugador1Turn: 1
   turnText: {fileID: 0}
   MensajeVictoria: {fileID: 0}
+  jugador1: {fileID: 0}
+  jugador2: {fileID: 0}
+  panelInicio: {fileID: 0}
+  MensajeFALLO: {fileID: 0}
 --- !u!1 &2138108560
 GameObject:
   m_ObjectHideFlags: 0

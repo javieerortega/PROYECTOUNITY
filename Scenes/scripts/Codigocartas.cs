@@ -61,7 +61,14 @@ public class Codigocartas : MonoBehaviour
         {
             panelvictoria.SetActive(true);
             panelJuego.SetActive(false);
-            MensajeVictoria.text = "EL GANADOR ES";
+            if (numParesAdivinados == totalPares && isJugador1Turn)
+            {
+                MensajeVictoria.text = "¡" + jugador1.text + " GANA!";
+            }
+            else
+            {
+                MensajeVictoria.text = "EL GANADOR ES";
+            }
             return;
         }
         if (isJugador1Turn)
