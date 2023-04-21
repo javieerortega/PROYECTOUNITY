@@ -10,8 +10,6 @@ public class Codigocartas : MonoBehaviour
     public List<GameObject> selectedImages = new List<GameObject>();
     public int maxSelectedImages = 2;
 
-    //public Script nombreJugadoresScript;
-
     public Text Jugador2;
     public int Jugador1Lives = 3;
     public int Jugador2Lives = 3;
@@ -117,7 +115,7 @@ public class Codigocartas : MonoBehaviour
         }
         else 
         {
-            turnText.text = "Turno de"+ jugador2.text;
+            turnText.text = "Turno de "+ jugador2.text;
             if (selectedImages.Count >= maxSelectedImages)
             {
                 Image image1 = selectedImages[0].GetComponent<Image>();
@@ -174,33 +172,9 @@ public class Codigocartas : MonoBehaviour
         {
             playerImage.sprite = Resources.Load<Sprite>("Corazones1");
         }
-        //else if (lives == 0)
-        //{
-        //    playerImage.sprite = Resources.Load<Sprite>("Corazones0");
-  
-        //    if (isJugador1Turn)
-        //    {
-        //        GameOver("Player 2");
-        //    }
-        //    else
-        //    {
-        //        GameOver("Player 1");
-        //    }
-            
-        //}
+
     }
-    //void TextodelTurno()
-    //{
-    
-    //    if (isJugador1Turn)
-    //    {
-            
-    //    }
-    //    else
-    //    {
-            
-    //    }
-    //}
+ 
     public void reiniciar()
     {
         SceneManager.LoadScene(0);
