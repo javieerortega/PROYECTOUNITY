@@ -10,7 +10,7 @@ public class Codigocartas : MonoBehaviour
     public List<GameObject> selectedImages = new List<GameObject>();
     public int maxSelectedImages = 2;
 
-    public Script nombreJugadoresScript;
+    //public Script nombreJugadoresScript;
 
     public Text Jugador2;
     public int Jugador1Lives = 3;
@@ -32,6 +32,8 @@ public class Codigocartas : MonoBehaviour
     public GameObject panelInicio;
     //public GameObject panelJuego;
     public Text MensajeFALLO;
+
+    string nombreGanador = "";
 
 
 
@@ -61,14 +63,17 @@ public class Codigocartas : MonoBehaviour
         {
             panelvictoria.SetActive(true);
             panelJuego.SetActive(false);
-            if (numParesAdivinados == totalPares && isJugador1Turn)
+
+            if (Jugador1Lives > Jugador2Lives)
             {
-                MensajeVictoria.text = "¡" + jugador1.text + " GANA!";
+                nombreGanador = jugador1.text;
             }
-            else
+            else if (Jugador2Lives > Jugador1Lives)
             {
-                MensajeVictoria.text = "EL GANADOR ES";
+                nombreGanador = jugador2.text;
             }
+
+            MensajeVictoria.text = "EL GANADOR ES " + nombreGanador;
             return;
         }
         if (isJugador1Turn)
