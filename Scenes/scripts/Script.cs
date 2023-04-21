@@ -16,15 +16,15 @@ public class Script : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }   
-   public void ComenzarJuego()
+    }
+    public void ComenzarJuego()
      { if (jugador1.text.Length == 0 || jugador2.text.Length == 0 || jugador1.text.Length > 9 || jugador2.text.Length > 9)
         {
             MensajeFALLO.text = "Introduzca un nombre válido para ambos jugadores";
