@@ -50,6 +50,8 @@ public class Codigocartas : MonoBehaviour
         if (Jugador1Lives <= 0 || Jugador2Lives <= 0)
         {
             panelvictoria.SetActive(true);
+            MensajeVictoria.text = "EL GANADOR ES" + ;
+            return;
         }
         if (isJugador1Turn)
         {
@@ -184,10 +186,13 @@ public class Codigocartas : MonoBehaviour
     {
         Application.Quit();
     }
-    public void victoria()
+    public void ganador()
     {
-        MensajeVictoria.text = "EL GANADOR ES";
-        return;
+        if (Jugador1Lives = 0)
+        {
+            MensajeVictoria.text = "Jugador2";
+            return;
+        }
     }
 
 }
