@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class Codigocartas : MonoBehaviour
 {
-    public List<GameObject> selectedImages = new List<GameObject>();
-    public int maxSelectedImages = 2;
+    public List<GameObject> imagenesseleccionadas = new List<GameObject>();
+    public int maximagenesseleccionadas = 2;
 
     public Text Jugador2;
-    public int Jugador1Lives = 3;
-    public int Jugador2Lives = 3;
+    public int Jugador1vidas = 5;
+    public int Jugador2vidas = 5;
     public GameObject panelvictoria;
     public GameObject panelJuego;
 
@@ -20,8 +20,8 @@ public class Codigocartas : MonoBehaviour
     public List<GameObject> vidap2;
 
 
-    public bool isJugador1Turn = true;
-    public Text turnText;
+    public bool turnojugador = true;
+    public Text textoturno;
 
     public Text MensajeVictoria;
 
@@ -57,16 +57,16 @@ public class Codigocartas : MonoBehaviour
 
     void seleccionCarta(GameObject image)
     {
-        if (Jugador1Lives <= 0 || Jugador2Lives <= 0)
+        if (Jugador1vidas <= 0 || Jugador2vidas <= 0)
         {
             panelvictoria.SetActive(true);
             panelJuego.SetActive(false);
 
-            if (Jugador1Lives > Jugador2Lives)
+            if (Jugador1vidas > Jugador2vidas)
             {
                 nombreGanador = jugador1.text;
             }
-            else if (Jugador2Lives > Jugador1Lives)
+            else if (Jugador2vidas > Jugador1vidas)
             {
                 nombreGanador = jugador2.text;
             }
@@ -74,18 +74,18 @@ public class Codigocartas : MonoBehaviour
             MensajeVictoria.text = "EL GANADOR ES " + nombreGanador;
             return;
         }
-        if (isJugador1Turn)
+        if (turnojugador)
         {
-            turnText.text = "Turno de "+ jugador1.text;
-            if (selectedImages.Count >= maxSelectedImages)
+            textoturno.text = "Turno de "+ jugador1.text;
+            if (imagenesseleccionadas.Count >= maximagenesseleccionadas)
             {
-                Image image1 = selectedImages[0].GetComponent<Image>();
-                Image image2 = selectedImages[1].GetComponent<Image>();
+                Image image1 = imagenesseleccionadas[0].GetComponent<Image>();
+                Image image2 = imagenesseleccionadas[1].GetComponent<Image>();
                 if (image1.sprite.name == image2.sprite.name)
                 {
                     {
-                        selectedImages[0].transform.parent.gameObject.SetActive(false);
-                        selectedImages[1].transform.parent.gameObject.SetActive(false);
+                        imagenesseleccionadas[0].transform.parent.gameObject.SetActive(false);
+                        imagenesseleccionadas[1].transform.parent.gameObject.SetActive(false);
 
                     }
 
@@ -93,38 +93,38 @@ public class Codigocartas : MonoBehaviour
 
                 else
                 {
-                    selectedImages[0].transform.gameObject.SetActive(false);
-                    selectedImages[1].transform.gameObject.SetActive(false);
-                    Jugador1Lives--;
-                    vidap1[Jugador1Lives].gameObject.SetActive(false);
-                    isJugador1Turn = false;
+                    imagenesseleccionadas[0].transform.gameObject.SetActive(false);
+                    imagenesseleccionadas[1].transform.gameObject.SetActive(false);
+                    Jugador1vidas--;
+                    vidap1[Jugador1vidas].gameObject.SetActive(false);
+                    turnojugador = false;
                     
 
                 }
                
-                selectedImages.Clear();
+                imagenesseleccionadas.Clear();
 
 
             }
 
             else
             {
-                selectedImages.Add(image);
+                imagenesseleccionadas.Add(image);
                 image.gameObject.SetActive(true);
             }
         }
         else 
         {
-            turnText.text = "Turno de "+ jugador2.text;
-            if (selectedImages.Count >= maxSelectedImages)
+            textoturno.text = "Turno de "+ jugador2.text;
+            if (imagenesseleccionadas.Count >= maximagenesseleccionadas)
             {
-                Image image1 = selectedImages[0].GetComponent<Image>();
-                Image image2 = selectedImages[1].GetComponent<Image>();
+                Image image1 = imagenesseleccionadas[0].GetComponent<Image>();
+                Image image2 = imagenesseleccionadas[1].GetComponent<Image>();
                 if (image1.sprite.name == image2.sprite.name)
                 {
                     {
-                        selectedImages[0].transform.parent.gameObject.SetActive(false);
-                        selectedImages[1].transform.parent.gameObject.SetActive(false);
+                        imagenesseleccionadas[0].transform.parent.gameObject.SetActive(false);
+                        imagenesseleccionadas[1].transform.parent.gameObject.SetActive(false);
 
                     }
 
@@ -132,22 +132,22 @@ public class Codigocartas : MonoBehaviour
 
                 else
                 {
-                    selectedImages[0].transform.gameObject.SetActive(false);
-                    selectedImages[1].transform.gameObject.SetActive(false);
-                    Jugador2Lives--;
-                    vidap2[Jugador2Lives].gameObject.SetActive(false);
-                    isJugador1Turn = true;
+                    imagenesseleccionadas[0].transform.gameObject.SetActive(false);
+                    imagenesseleccionadas[1].transform.gameObject.SetActive(false);
+                    Jugador2vidas--;
+                    vidap2[Jugador2vidas].gameObject.SetActive(false);
+                    turnojugador = true;
                     
 
                 }
 
-                selectedImages.Clear();
+                imagenesseleccionadas.Clear();
 
             }
 
             else
             {
-                selectedImages.Add(image);
+                imagenesseleccionadas.Add(image);
                 image.gameObject.SetActive(true);
             }
 
@@ -157,18 +157,18 @@ public class Codigocartas : MonoBehaviour
 
     }
 
-    void ActualizarVidas(int lives, Image playerImage)
+    void ActualizarVidas(int vidas, Image playerImage)
     {
 
-        if (lives == 3)
+        if (vidas == 3)
         {
             playerImage.sprite = Resources.Load<Sprite>("Corazones3");
         }
-        else if (lives == 2)
+        else if (vidas == 2)
         {
             playerImage.sprite = Resources.Load<Sprite>("Corazones2");
         }
-        else if (lives == 1)
+        else if (vidas == 1)
         {
             playerImage.sprite = Resources.Load<Sprite>("Corazones1");
         }
